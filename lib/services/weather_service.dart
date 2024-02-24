@@ -13,7 +13,7 @@ class WeatherService {
     http.Response response = await http.get(url);
 
     if (response.statusCode == 400) {
-    var data  = jsonDecode(response.body);
+      var data = jsonDecode(response.body);
       throw Exception(data['error']['message']);
     }
     Map<String, dynamic> data = jsonDecode(response.body);
