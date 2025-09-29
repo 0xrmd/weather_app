@@ -6,7 +6,7 @@ import 'package:weather_app/models/weather_model.dart';
 class WeatherService {
   String baseUrl = 'http://api.weatherapi.com/v1';
 
-  String apiKey = '3677bed892474b30b7a122242220806';
+  String apiKey = 'CHANGE_WITH_REAL_API_KEY';
   Future<WeatherModel> getWeather({required String cityName}) async {
     Uri url =
         Uri.parse('$baseUrl/forecast.json?key=$apiKey&q=$cityName&days=7');
